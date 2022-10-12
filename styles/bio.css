@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+footer {
+  font-family: "Avenir Next";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+h1,
+h2 {
+  font-family: "Avenir Next";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Avenir Next";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+}
+
+h2,
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.site-header {
+  background-color: #323232;
+  padding-top: 1rem;
+}
+.site-header-flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.site-header__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-header__list-flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+.site-header-flexbox__box:nth-child(2) {
+  align-self: stretch;
+}
+.site-header__item {
+  width: 50vw;
+  text-align: center;
+}
+.site-header__link:link, .site-header__link:visited {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  width: 50vw;
+  padding-bottom: 1rem;
+}
+.site-header__bio-link:link, .site-header__bio-link:visited, .site-header__bio-link:hover, .site-header__bio-link:active, .site-header__show-link:hover, .site-header__show-link:active {
+  border-bottom: 3px solid #ffffff;
+}
+.site-header__show-link:link, .site-header__show-link:visited {
+  color: #e1e1e1;
+}
+.site-header__img {
+  margin-bottom: 1rem;
+}
+
+.hero-banner {
+  background-image: url("../assets/Images/hero-bio.jpg");
+  height: 50vh;
+  background-size: cover;
+  align-items: center;
+}
+
+.hero-banner-flexbox {
+  display: flex;
+}
+
+.hero-banner__heading {
+  color: #ffffff;
+  margin-left: 1rem;
+}
+
+.main-section {
+  margin: 0 1rem;
+}
+
+.main-section__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-section__text {
+  font-weight: 600;
+}/*# sourceMappingURL=bio.css.map */

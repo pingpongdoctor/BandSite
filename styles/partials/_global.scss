@@ -1,0 +1,89 @@
+@use "./minxins" as *;
+@use "./variables" as *;
+@use "./fonts" as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+footer {
+  @include fontsize-lineheight-fontweight(0.8125rem, 1.125rem, 400);
+}
+
+h1,
+h2 {
+  @include fontsize-lineheight-fontweight(1.5rem, 2rem, 700);
+}
+
+h3 {
+  @include fontsize-lineheight-fontweight(0.875rem, 1.375rem, 600);
+}
+
+h2,
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.site-header {
+  background-color: $bandsite-black;
+  padding-top: 1rem;
+
+  &-flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__list-flexbox {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-flexbox__box:nth-child(2) {
+    align-self: stretch;
+  }
+
+  &__item {
+    width: 50vw;
+    text-align: center;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: $white;
+    display: inline-block;
+    width: 50vw;
+    padding-bottom: 1rem;
+  }
+
+  &__bio-link:link,
+  &__bio-link:visited,
+  &__bio-link:hover,
+  &__bio-link:active,
+  &__show-link:hover,
+  &__show-link:active {
+    border-bottom: 3px solid $white;
+  }
+
+  &__show-link:link,
+  &__show-link:visited {
+    color: $mercury;
+  }
+  &__img {
+    margin-bottom: 1rem;
+  }
+}

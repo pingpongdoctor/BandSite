@@ -1,0 +1,35 @@
+@use "./partials/variables" as *;
+@use "./partials/minxins" as *;
+@use "./partials/fonts" as *;
+@use "./partials/global" as *;
+
+// Hero banner
+.hero-banner {
+  background-image: url("../assets/Images/hero-bio.jpg");
+  height: 50vh;
+  background-size: cover;
+  align-items: center;
+}
+
+.hero-banner-flexbox {
+  display: flex;
+}
+
+.hero-banner__heading {
+  color: $white;
+  margin-left: 1rem;
+}
+
+// Main section
+.main-section {
+  margin: 0 1rem;
+}
+
+.main-section__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.main-section__text {
+  font-weight: 600;
+}

@@ -1,0 +1,18 @@
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin fontsize-lineheight-fontweight($font-size, $line-height, $font-weight) {
+  font-family: "Avenir Next";
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
