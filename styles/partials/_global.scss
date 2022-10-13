@@ -2,23 +2,32 @@
 @use "./variables" as *;
 @use "./fonts" as *;
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next";
 }
 
 body,
 footer {
-  @include fontsize-lineheight-fontweight(0.8125rem, 1.125rem, 400);
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 
 h1,
 h2 {
-  @include fontsize-lineheight-fontweight(1.5rem, 2rem, 700);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 h3 {
-  @include fontsize-lineheight-fontweight(0.875rem, 1.375rem, 600);
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
 }
 
 h2,
@@ -33,27 +42,17 @@ p {
 
 .site-header {
   background-color: $bandsite-black;
-  padding-top: 1rem;
-
-  &-flexbox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 
   &__list {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-
-  &__list-flexbox {
     display: flex;
-    justify-content: space-between;
-  }
-
-  &-flexbox__box:nth-child(2) {
-    align-self: stretch;
   }
 
   &__item {
@@ -67,22 +66,19 @@ p {
     color: $white;
     display: inline-block;
     width: 50vw;
-    padding-bottom: 1rem;
-  }
-
-  &__bio-link:link,
-  &__bio-link:visited,
-  &__bio-link:hover,
-  &__bio-link:active,
-  &__show-link:hover,
-  &__show-link:active {
-    border-bottom: 3px solid $white;
-  }
-
-  &__show-link:link,
-  &__show-link:visited {
+    padding-bottom: 0.5rem;
     color: $mercury;
   }
+
+  &__link:hover {
+    border-bottom: 3px solid $white;
+    color: $white;
+  }
+
+  &__link:active {
+    font-weight: bold;
+  }
+
   &__img {
     margin-bottom: 1rem;
   }

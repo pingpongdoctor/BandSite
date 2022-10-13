@@ -14,14 +14,16 @@
   font-weight: 700;
 }
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Avenir Next";
 }
 
 body,
 footer {
-  font-family: "Avenir Next";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
@@ -29,14 +31,12 @@ footer {
 
 h1,
 h2 {
-  font-family: "Avenir Next";
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
 }
 
 h3 {
-  font-family: "Avenir Next";
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
@@ -54,24 +54,17 @@ p {
 
 .site-header {
   background-color: #323232;
-  padding-top: 1rem;
-}
-.site-header-flexbox {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .site-header__list {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-.site-header__list-flexbox {
   display: flex;
-  justify-content: space-between;
-}
-.site-header-flexbox__box:nth-child(2) {
-  align-self: stretch;
 }
 .site-header__item {
   width: 50vw;
@@ -82,13 +75,15 @@ p {
   color: #ffffff;
   display: inline-block;
   width: 50vw;
-  padding-bottom: 1rem;
-}
-.site-header__bio-link:link, .site-header__bio-link:visited, .site-header__bio-link:hover, .site-header__bio-link:active, .site-header__show-link:hover, .site-header__show-link:active {
-  border-bottom: 3px solid #ffffff;
-}
-.site-header__show-link:link, .site-header__show-link:visited {
+  padding-bottom: 0.5rem;
   color: #e1e1e1;
+}
+.site-header__link:hover {
+  border-bottom: 3px solid #ffffff;
+  color: #ffffff;
+}
+.site-header__link:active {
+  font-weight: bold;
 }
 .site-header__img {
   margin-bottom: 1rem;
@@ -96,13 +91,11 @@ p {
 
 .hero-banner {
   background-image: url("../assets/Images/hero-bio.jpg");
-  height: 50vh;
+  height: 53vh;
   background-size: cover;
   align-items: center;
-}
-
-.hero-banner-flexbox {
   display: flex;
+  overflow: hidden;
 }
 
 .hero-banner__heading {
@@ -110,16 +103,83 @@ p {
   margin-left: 1rem;
 }
 
-.main-section {
+.main-container {
   margin: 0 1rem;
 }
 
-.main-section__img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.main-container__img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
-.main-section__text {
+.main-container__text--bold {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.photo-gallery {
+  margin: 0 1rem;
+  color: #fafafa;
+  padding-bottom: 1rem;
+}
+
+.photo-gallery__img-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.photo-gallery__img {
+  width: 100%;
+  height: auto;
+}
+
+.photo-gallery__heading {
+  color: #000000;
+}
+
+.site-footer {
+  background-color: #323232;
+  padding: 1.5rem 1rem 0 1rem;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.site-footer__heading {
+  margin-top: 0;
+}
+
+.site-footer__social-icon {
+  margin-bottom: 1rem;
+}
+
+.site-footer__social-icon img {
+  margin-right: 2rem;
+}
+
+.site-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.site-footer__name {
+  margin-bottom: 0;
   font-weight: 600;
+  margin-top: 0;
+}
+
+.site-footer__department {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.site-footer__address {
+  width: 55%;
+}
+
+.site-footer__copy-right {
+  margin-top: 0;
 }/*# sourceMappingURL=bio.css.map */
