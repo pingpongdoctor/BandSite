@@ -108,13 +108,12 @@ footer {
   &__link:link,
   &__link:visited {
     text-decoration: none;
-    color: $white;
     display: inline-block;
     width: 50vw;
-    padding-bottom: 16px;
     color: $mercury;
+    padding-bottom: 16px;
     @include tablet {
-      width: 9vw;
+      width: 4.6rem;
       padding-bottom: 28px;
     }
   }
@@ -122,15 +121,10 @@ footer {
   &__link:hover {
     border-bottom: 3px solid $white;
     color: $white;
-    padding-bottom: 13px;
-    @include tablet {
-      padding-bottom: 25px;
-    }
   }
 
   &__link:active {
     font-weight: bold;
-    padding-bottom: 5px;
   }
 
   @include tablet {
@@ -143,7 +137,10 @@ footer {
 
 .logo {
   margin-bottom: 1rem;
+}
+
+.logo--appear {
   @include tablet {
-    margin-bottom: 0;
+    display: none;
   }
 }

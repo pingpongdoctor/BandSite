@@ -3,6 +3,10 @@
 @use "./partials/fonts" as *;
 @use "./partials/global" as *;
 
+.header__link--active {
+  border-bottom: 3px solid $white;
+}
+
 // HERO BANNER
 .hero-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -55,6 +59,11 @@
   @include tablet {
     margin: 0 2.25rem;
   }
+
+  @include desktop {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
 }
 
 // PHOTO GALLERY
@@ -88,8 +97,14 @@
   &__heading {
     color: $bandsite-darkblack;
   }
+
   @include tablet {
     margin: 0 2.25rem;
+  }
+
+  @include desktop {
+    margin: 0 auto;
+    max-width: 1280px;
   }
 }
 
@@ -99,6 +114,13 @@
   padding: 1.5rem 1rem 0 1rem;
   color: $white;
   overflow: hidden;
+
+  &__container {
+    @include desktop {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  }
 
   &__heading,
   &__copy-right {
@@ -120,13 +142,12 @@
     @include tablet {
       flex-direction: row;
       gap: 1rem;
+      align-items: flex-start;
     }
   }
 
   &__contact {
-    @include tablet {
-      width: 25%;
-    }
+    width: 30%;
   }
 
   &__name {
@@ -139,47 +160,36 @@
     margin-top: 0;
   }
 
-  &__address {
-    width: 55%;
-  }
-
   &__wrap {
     @include tablet {
       display: flex;
+      align-items: center;
       gap: 3rem;
       margin-bottom: 2.25rem;
-      align-items: center;
     }
     @include desktop {
       display: flex;
-      gap: 6rem;
-      margin-bottom: 2.25rem;
       align-items: center;
-    }
-  }
-
-  &__logo {
-    @include tablet {
-      position: absolute;
-      top: 3.8rem;
-      right: 5rem;
+      gap: 12rem;
     }
   }
 
   @include tablet {
     padding: 3rem 2.125rem 2rem 2.25rem;
-    position: relative;
   }
 }
 
 .icons {
   margin-bottom: 1.5rem;
   @include tablet {
-    margin-bottom: 0;
-    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
   }
 }
 
 .icon {
   margin-right: 2rem;
+  @include tablet {
+    width: 2vw;
+    max-width: 2rem;
+  }
 }
