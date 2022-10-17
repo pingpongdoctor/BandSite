@@ -3,32 +3,52 @@
 @use "./partials/fonts" as *;
 @use "./partials/global" as *;
 
+//Header
 .header__link--active {
   border-bottom: 3px solid $white;
 }
 
-// HERO BANNER
+// HERO
 .hero-banner {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/Images/hero-bio.jpg");
-  height: 53vh;
+  height: 55vh;
   background-size: cover;
   align-items: center;
   display: flex;
   overflow: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   &__heading {
     color: $white;
-    margin-left: 1rem;
-    @include tablet {
-      margin-left: 2.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    // @include tablet {
+    //   margin-left: 2.25rem;
+    // }
+    @include desktop {
+      margin: 0 auto;
+      width: 1280px;
     }
+  }
+  @include tablet {
+    height: 65vh;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 
 // Main section
 .main {
   margin: 0 1rem;
+
+  &__container {
+    @include desktop {
+      margin: 0 auto;
+      max-width: 1280px;
+    }
+  }
 
   &__img {
     max-width: 100%;
@@ -59,19 +79,13 @@
   @include tablet {
     margin: 0 2.25rem;
   }
-
-  @include desktop {
-    margin: 0 auto;
-    max-width: 1280px;
-  }
 }
 
 // PHOTO GALLERY
 
 .photo-gallery {
-  margin: 0 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
   color: $alabaster;
-  margin-bottom: 1rem;
 
   &__img-wrap {
     display: flex;
@@ -80,8 +94,8 @@
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 1.05rem;
+      justify-content: center;
+      gap: 1.5rem;
     }
   }
 
@@ -89,26 +103,28 @@
     width: 100%;
     height: auto;
     @include tablet {
-      width: 30%;
-      margin-bottom: 1.2rem;
+      width: 31%;
     }
   }
 
   &__heading {
     color: $bandsite-darkblack;
+    margin-top: 0;
   }
 
   @include tablet {
-    margin: 0 2.25rem;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+    margin-top: 0rem;
   }
-
-  @include desktop {
-    margin: 0 auto;
-    max-width: 1280px;
+  .photo-gallery__container {
+    @include desktop {
+      margin: 0 auto;
+      max-width: 1280px;
+    }
   }
 }
 
-//SITE-FOOTER
+//FOOTER
 .footer {
   background-color: $bandsite-black;
   padding: 1.5rem 1rem 0 1rem;
@@ -137,17 +153,28 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.25rem;
 
     @include tablet {
       flex-direction: row;
-      gap: 1rem;
       align-items: flex-start;
+      justify-content: space-between;
+      gap: 0;
+    }
+    @include desktop {
+      justify-content: flex-start;
+      gap: 4.5rem;
     }
   }
 
   &__contact {
-    width: 30%;
+    width: 65%;
+    @include tablet {
+      width: 25%;
+    }
+    @include desktop {
+      width: 16%;
+    }
   }
 
   &__name {
@@ -164,32 +191,51 @@
     @include tablet {
       display: flex;
       align-items: center;
-      gap: 3rem;
+      gap: 4.3rem;
       margin-bottom: 2.25rem;
     }
     @include desktop {
-      display: flex;
-      align-items: center;
-      gap: 12rem;
+      gap: 3.2rem;
     }
   }
 
   @include tablet {
-    padding: 3rem 2.125rem 2rem 2.25rem;
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+}
+
+.logo {
+  max-width: 120px;
+  margin-bottom: 1rem;
+
+  &__tablet-footer {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__mobile-footer {
+    @include tablet {
+      display: none;
+    }
   }
 }
 
 .icons {
   margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
   @include tablet {
-    margin-bottom: 0.5rem;
-  }
-}
+    gap: 1.5rem;
+    margin-top: 1.6rem;
+    margin-right: auto;
 
-.icon {
-  margin-right: 2rem;
-  @include tablet {
-    width: 2vw;
-    max-width: 2rem;
+    .icon {
+      @include tablet {
+        height: 5vh;
+        max-height: 28px;
+      }
+    }
   }
 }
