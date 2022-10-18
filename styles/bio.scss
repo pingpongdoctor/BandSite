@@ -89,6 +89,13 @@
   padding: 1.5rem 1rem 1rem 1rem;
   color: $alabaster;
 
+  &__container {
+    @include desktop {
+      margin: 0 auto;
+      max-width: 1280px;
+    }
+  }
+
   &__img-wrap {
     display: flex;
     flex-direction: column;
@@ -96,7 +103,6 @@
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 1.5rem;
     }
   }
@@ -104,8 +110,13 @@
   &__img {
     width: 100%;
     height: auto;
+    filter: grayscale(100%);
+    &:hover {
+      filter: none;
+    }
     @include tablet {
-      width: 31%;
+      flex: 1;
+      width: 30%;
     }
   }
 
@@ -113,16 +124,9 @@
     color: $bandsite-darkblack;
     margin-top: 0;
   }
-
   @include tablet {
     padding: 3rem 2.25rem 2.25rem 2.25rem;
     margin-top: 0rem;
-  }
-  .photo-gallery__container {
-    @include desktop {
-      margin: 0 auto;
-      max-width: 1280px;
-    }
   }
 }
 
@@ -172,16 +176,13 @@
     @include tablet {
       width: 215px;
     }
-    // @include desktop {
-    //   width: 16%;
-    // }
   }
 
   &__name {
     margin-bottom: 0;
   }
 
-  &__department,
+  &__company,
   &__name {
     font-weight: 600;
     margin-top: 0;

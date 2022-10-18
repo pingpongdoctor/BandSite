@@ -85,7 +85,7 @@ footer {
     @include tablet {
       flex-direction: row;
       align-items: flex-start;
-      gap: 2rem;
+      gap: 3rem;
     }
     @include desktop {
       max-width: 1280px;
@@ -100,6 +100,7 @@ footer {
     display: flex;
     text-align: start;
     justify-content: center;
+    gap: 0.5rem;
     @include tablet {
       gap: 1rem;
     }
