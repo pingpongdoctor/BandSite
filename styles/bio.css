@@ -6,7 +6,7 @@
 @font-face {
   font-family: "Avenir Next";
   src: url(../../assets/Font/AvenirNextLTPro-Demi.otf), url("../../assets/Font/Alternative-files/AvenirNextLTProDemi.ttf") format("truetype");
-  font-weight: 600;
+  font-weight: 500;
 }
 @font-face {
   font-family: "Avenir Next";
@@ -34,7 +34,7 @@ body {
 h1 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   h1 {
@@ -46,7 +46,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -62,7 +62,7 @@ h2 {
 h3 {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -106,7 +106,7 @@ footer {
   .header__container {
     flex-direction: row;
     align-items: flex-start;
-    gap: 4rem;
+    gap: 2rem;
   }
 }
 @media (min-width: 1280px) {
@@ -122,11 +122,10 @@ footer {
   display: flex;
   text-align: start;
   justify-content: center;
-  gap: 1rem;
 }
 @media (min-width: 768px) {
   .header__list {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 }
 .header__item {
@@ -135,10 +134,10 @@ footer {
 }
 @media (min-width: 768px) {
   .header__item {
-    width: 9vw;
+    width: 73px;
   }
 }
-.header__link:link, .header__link:visited {
+.header__link {
   text-decoration: none;
   display: inline-block;
   width: 50vw;
@@ -146,7 +145,7 @@ footer {
   padding-bottom: 16px;
 }
 @media (min-width: 768px) {
-  .header__link:link, .header__link:visited {
+  .header__link {
     width: 4.6rem;
     padding-bottom: 33px;
   }
@@ -169,19 +168,20 @@ footer {
 }
 
 .hero-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Images/hero-bio.jpg");
-  height: 55vh;
-  background-size: cover;
-  align-items: center;
   display: flex;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Images/hero-bio.jpg");
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
   padding-left: 1rem;
   padding-right: 1rem;
+  height: 45vh;
 }
 .hero-banner__heading {
-  color: #ffffff;
   margin-top: 0;
   margin-bottom: 0;
+  color: #ffffff;
 }
 @media (min-width: 1280px) {
   .hero-banner__heading {
@@ -191,9 +191,14 @@ footer {
 }
 @media (min-width: 768px) {
   .hero-banner {
-    height: 65vh;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
+    height: 50vh;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-banner {
+    height: 60vh;
   }
 }
 
@@ -309,14 +314,12 @@ footer {
   .footer__contacts {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 0;
+    gap: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .footer__contacts {
-    justify-content: flex-start;
-    gap: 4.5rem;
+    gap: 6rem;
   }
 }
 .footer__contact {
@@ -324,12 +327,7 @@ footer {
 }
 @media (min-width: 768px) {
   .footer__contact {
-    width: 25%;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__contact {
-    width: 16%;
+    width: 215px;
   }
 }
 .footer__name {
@@ -343,13 +341,13 @@ footer {
   .footer__wrap {
     display: flex;
     align-items: center;
-    gap: 4.3rem;
+    gap: 2.5rem;
     margin-bottom: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .footer__wrap {
-    gap: 3.2rem;
+    gap: 6rem;
   }
 }
 @media (min-width: 768px) {
