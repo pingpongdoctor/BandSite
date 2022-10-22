@@ -1,0 +1,59 @@
+@use "./partials/variables" as *;
+@use "./partials/minxins" as *;
+@use "./partials/fonts" as *;
+@use "./partials/global" as *;
+
+//HERO
+
+.hero__container-shows {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  @include tablet {
+    gap: 2.25rem;
+    height: 60vh;
+  }
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.hero__heading-shows {
+  margin: 0;
+  width: 220px;
+  @include tablet {
+    width: 500px;
+  }
+  @include desktop {
+  }
+}
+
+.hero__text {
+  margin-bottom: 0;
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+}
+
+.hero-shows {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/Images/hero-shows.jpg");
+}
+
+.frame {
+  width: 100%;
+  height: 15vh;
+  margin: 0;
+  @include tablet {
+    width: 60%;
+    height: 20vh;
+  }
+  @include desktop {
+    padding-left: 10rem;
+  }
+}

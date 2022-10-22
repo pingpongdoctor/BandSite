@@ -29,8 +29,10 @@
     </header>
 
     <!-- HERO -->
-    <section class="hero-banner">
-      <h1 class="hero-banner__heading">The Bee Knees</h1>
+    <section class="hero">
+      <div class="hero__container">
+        <h1 class="hero__heading">The Bee Knees</h1>
+      </div>
     </section>
 
     <!-- MAIN-->
@@ -135,6 +137,41 @@
       </div>
     </section>
 
+    <!-- JOIN THE CONVERSATION -->
+    <section class="conversation">
+      <div class="conversation__container">
+        <h2 class="conversation__heading">Join the Conversation</h2>
+        <div class="conversation__wrap">
+          <img
+            class="conversation__img"
+            src="./assets/Images/Mohan-muruge.jpg"
+            alt="Mohan-muruge"
+          />
+          <form class="conversation__form">
+            <label class="conversation__label" for="name">Name</label>
+            <input
+              class="conversation__input conversation__input-name"
+              id="name"
+              placeholder="Enter your name"
+              type="text"
+              name="name"
+            />
+            <label class="conversation__label" for="comment">Comment</label>
+            <textarea
+              class="conversation__input"
+              id="comment"
+              name="comment"
+              rows="5"
+              wrap="hard"
+              placeholder="Add a new comment"
+            ></textarea>
+            <button class="conversation__btn" type="submit">Comment</button>
+          </form>
+        </div>
+        <ul class="conversation__list"></ul>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__container">
@@ -193,7 +230,9 @@
           <div class="footer__contact">
             <p class="footer__name">Carson Whyte</p>
             <p class="footer__company">ARCH Entertainment</p>
-            <p class="footer__address">Booking Agent for UK / EU / AU</p>
+            <p class="footer__address footer__address--smaller">
+              Booking Agent for UK / EU / AU
+            </p>
             <p>cwhyte@archentertainment.com</p>
           </div>
         </div>
@@ -209,5 +248,6 @@
         </p>
       </div>
     </footer>
+    <script src="./scripts/index-page.js"></script>
   </body>
 </html>
