@@ -45,7 +45,7 @@ const addComment = function () {
     //Create image
     const commentImg = document.createElement("img");
     commentImg.classList.add("conversation__img");
-    commentImg.src = "http://127.0.0.1:5501/assets/Images/Mohan-muruge.jpg";
+    commentImg.src = "./assets/Images/Mohan-muruge.jpg";
     //Create p name
     const commentName = document.createElement("p");
     commentName.classList.add("conversation__name");
@@ -96,7 +96,7 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-//Make the input box active when typing
+//Make the input box active when focus and not active when blur
 for (let i = 0; i < input.length; i++) {
   //use focus event
   input[i].addEventListener("focus", (event) => {

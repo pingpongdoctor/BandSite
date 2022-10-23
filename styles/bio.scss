@@ -160,26 +160,6 @@
   }
 }
 
-.conversation__btn {
-  height: 40px;
-  font-size: 1.5rem;
-  color: $white;
-  background-color: $bandsite-black;
-  border: none;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  &:hover {
-    background-color: $bandsite-darkblack;
-    color: $white;
-  }
-  @include tablet {
-    padding: 0 32px;
-    width: 200px;
-    border-radius: 4px;
-    margin-left: auto;
-  }
-}
-
 .conversation__list {
   list-style: none;
   margin: 0;
@@ -215,4 +195,23 @@
 
 .conversation__date {
   color: $silver;
+}
+
+.btn {
+  height: 40px;
+  font-size: 1.5rem;
+  color: $white;
+  background-color: $bandsite-black;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  &:hover {
+    background-color: $bandsite-darkblack;
+    color: $white;
+  }
+  @include tablet {
+    padding: 0 32px;
+    width: 200px;
+    margin-left: auto;
+  }
 }

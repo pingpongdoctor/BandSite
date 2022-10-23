@@ -95,7 +95,7 @@ footer {
 button {
   font-size: 0.625rem;
   line-height: 1.25rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .header {
@@ -241,7 +241,7 @@ button {
 }
 @media (min-width: 1280px) {
   .footer__contacts {
-    gap: 6rem;
+    gap: 3.5rem;
   }
 }
 .footer__contact {
@@ -272,7 +272,7 @@ button {
 }
 @media (min-width: 1280px) {
   .footer__wrap {
-    gap: 6rem;
+    gap: 3.8rem;
   }
 }
 @media (min-width: 768px) {
@@ -487,28 +487,6 @@ button {
   }
 }
 
-.conversation__btn {
-  height: 40px;
-  font-size: 1.5rem;
-  color: #ffffff;
-  background-color: #323232;
-  border: none;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-.conversation__btn:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-@media (min-width: 768px) {
-  .conversation__btn {
-    padding: 0 32px;
-    width: 200px;
-    border-radius: 4px;
-    margin-left: auto;
-  }
-}
-
 .conversation__list {
   list-style: none;
   margin: 0;
@@ -546,4 +524,25 @@ button {
 
 .conversation__date {
   color: #afafaf;
+}
+
+.btn {
+  height: 40px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #323232;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .btn {
+    padding: 0 32px;
+    width: 200px;
+    margin-left: auto;
+  }
 }/*# sourceMappingURL=bio.css.map */

@@ -95,7 +95,7 @@ footer {
 button {
   font-size: 0.625rem;
   line-height: 1.25rem;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .header {
@@ -241,7 +241,7 @@ button {
 }
 @media (min-width: 1280px) {
   .footer__contacts {
-    gap: 6rem;
+    gap: 3.5rem;
   }
 }
 .footer__contact {
@@ -272,7 +272,7 @@ button {
 }
 @media (min-width: 1280px) {
   .footer__wrap {
-    gap: 6rem;
+    gap: 3.8rem;
   }
 }
 @media (min-width: 768px) {
@@ -318,6 +318,11 @@ button {
   }
 }
 
+.hero-shows {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Images/hero-shows.jpg");
+  background-position-y: 30%;
+}
+
 .hero__container-shows {
   flex-direction: column;
   justify-content: center;
@@ -327,14 +332,16 @@ button {
 @media (min-width: 768px) {
   .hero__container-shows {
     gap: 2.25rem;
-    height: 60vh;
+    height: 70vh;
   }
 }
 @media (min-width: 1280px) {
   .hero__container-shows {
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 0;
+    height: 80vh;
   }
 }
 
@@ -344,9 +351,10 @@ button {
 }
 @media (min-width: 768px) {
   .hero__heading-shows {
-    width: 500px;
+    width: 550px;
   }
 }
+
 .hero__text {
   margin-bottom: 0;
 }
@@ -358,10 +366,6 @@ button {
   }
 }
 
-.hero-shows {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Images/hero-shows.jpg");
-}
-
 .frame {
   width: 100%;
   height: 15vh;
@@ -369,12 +373,163 @@ button {
 }
 @media (min-width: 768px) {
   .frame {
-    width: 60%;
+    width: 400px;
     height: 20vh;
   }
 }
 @media (min-width: 1280px) {
   .frame {
-    padding-left: 10rem;
+    width: 38%;
   }
+}
+
+.shows {
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .shows {
+    padding: 0 1.125rem;
+    padding-bottom: 2.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .shows__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 9.3rem;
+    margin: 0 auto;
+    max-width: 1316px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .shows__table {
+    flex-grow: 1;
+    margin-top: 65px;
+  }
+}
+
+.shows__heading {
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .shows__heading {
+    padding-left: 1.125rem;
+  }
+}
+
+.shows__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shows__item {
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 1rem 1rem;
+}
+@media (min-width: 768px) {
+  .shows__item {
+    padding: 1.5rem 1.125rem 1.5rem 1.125rem;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .shows__wrap {
+    flex: 1;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__wrap:first-child {
+    flex: 1.3 1 0;
+  }
+}
+
+.shows__sub-header {
+  color: #afafaf;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+@media (min-width: 768px) {
+  .shows__sub-header {
+    display: none;
+  }
+}
+
+.shows__date-detail {
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .shows__date-detail {
+    padding-top: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .shows__venue-detail,
+.shows__location-detail {
+    padding-top: 1.3rem;
+  }
+}
+
+.shows__display-wrap {
+  display: none;
+}
+@media (min-width: 768px) {
+  .shows__display-wrap {
+    display: flex;
+    color: #afafaf;
+    padding: 0 1rem;
+  }
+}
+
+.shows__sub-header-display {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .shows__sub-header-display {
+    flex: 1;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__sub-header-display {
+    flex: 1;
+  }
+  .shows__sub-header-display:first-child {
+    flex-grow: 1.3;
+  }
+}
+
+.shows__row-hover {
+  background-color: #e1e1e1;
+}
+
+.btn {
+  height: 40px;
+  color: #ffffff;
+  background-color: #323232;
+  width: 100%;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.btn:hover {
+  background-color: #000000;
+}
+@media (min-width: 768px) {
+  .btn {
+    padding: 0 32px;
+    width: 180px;
+    margin-top: 0.6rem;
+  }
+}
+
+.btn__visibility {
+  visibility: hidden;
+  height: 1px;
 }/*# sourceMappingURL=show.css.map */
