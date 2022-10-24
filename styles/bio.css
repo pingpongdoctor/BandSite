@@ -473,10 +473,14 @@ button {
   font-weight: 400;
   background-color: #fafafa;
 }
-@media (min-width: 768px) {
-  .conversation__input {
-    padding: 16px;
-  }
+.conversation__input--focus {
+  border: 1px solid #000000;
+}
+.conversation__input--blur {
+  border: 1px solid #e1e1e1;
+}
+.conversation__input--error {
+  border: 1px solid #d22d2d;
 }
 .conversation__input-name {
   height: 40px;
@@ -484,6 +488,11 @@ button {
 @media (min-width: 768px) {
   .conversation__input-name {
     height: 54px;
+  }
+}
+@media (min-width: 768px) {
+  .conversation__input {
+    padding: 16px;
   }
 }
 .conversation__list {

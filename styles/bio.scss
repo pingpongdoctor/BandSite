@@ -152,14 +152,27 @@
     line-height: 1.125rem;
     font-weight: 400;
     background-color: $alabaster;
-    @include tablet {
-      padding: 16px;
+
+    &--focus {
+      border: 1px solid $bandsite-darkblack;
     }
+
+    &--blur {
+      border: 1px solid $mercury;
+    }
+
+    &--error {
+      border: 1px solid #d22d2d;
+    }
+
     &-name {
       height: 40px;
       @include tablet {
         height: 54px;
       }
+    }
+    @include tablet {
+      padding: 16px;
     }
   }
 

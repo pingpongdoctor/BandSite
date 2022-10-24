@@ -80,6 +80,7 @@ const form = document.querySelector(".conversation__form");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+  //Submit the form
   if (event.target.name.value !== "" && event.target.comment.value !== "") {
     const newComment = {
       name: event.target.name.value,
@@ -91,11 +92,14 @@ form.addEventListener("submit", (event) => {
     };
     commentData.unshift(newComment);
     addComment();
+    input.forEach((inputBox) => {
+      inputBox.classList.remove("conversation__input--error");
+    });
   } else {
     //Change the color of the inputs' boder when there is empty inputs
     input.forEach((inputBox) => {
       if (inputBox.value === "") {
-        inputBox.style.border = "1px solid #D22D2D";
+        inputBox.classList.add("conversation__input--error");
         alert(`Please enter your ${inputBox.name}!`);
       }
     });
@@ -106,10 +110,12 @@ form.addEventListener("submit", (event) => {
 for (let i = 0; i < input.length; i++) {
   //use focus event
   input[i].addEventListener("focus", (event) => {
-    event.target.style.border = "1px solid #000000";
+    input[i].classList.add("conversation__input--focus");
+    input[i].classList.remove("conversation__input--blur");
   });
   //use blur event
   input[i].addEventListener("blur", (event) => {
-    event.target.style.border = "1px solid #e1e1e1";
+    input[i].classList.add("conversation__input--blur");
+    input[i].classList.remove("conversation__input--focus");
   });
 }
