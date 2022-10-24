@@ -92,111 +92,120 @@
   }
 }
 
-//conversation
+//CONVERSATION
 .conversation {
   margin: 0 1rem 1rem 1rem;
   @include tablet {
     margin: 0 2.25rem 2.25rem 2.25rem;
   }
-}
 
-.conversation__container {
-  @include desktop {
-    margin: 0 auto;
-    max-width: 1280px;
-  }
-}
-
-.conversation__img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 20% 50%;
-  background-color: $mercury;
-  @include tablet {
-    width: 48px;
-    height: 48px;
-  }
-}
-.conversation__wrap {
-  display: flex;
-  gap: 1rem;
-  @include tablet {
-    padding: 0 3rem;
-  }
-}
-.conversation__form {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-.conversation__label {
-  color: $silver;
-  margin-bottom: 4px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.conversation__input {
-  border-radius: 4px;
-  padding: 12px;
-  margin-bottom: 1rem;
-  border: 1px solid $mercury;
-  text-align: start;
-  outline: none;
-  font-family: "Avenir Next";
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  background-color: $alabaster;
-  @include tablet {
-    padding: 16px;
-  }
-  &-name {
-    height: 40px;
-    @include tablet {
-      height: 54px;
+  &__container {
+    @include desktop {
+      margin: 0 auto;
+      max-width: 1280px;
     }
   }
-}
 
-.conversation__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  @include tablet {
-    padding: 0 3rem;
+  &__img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 20% 50%;
+    background-color: $mercury;
+    @include tablet {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  &__wrap {
+    display: flex;
+    gap: 1rem;
+    @include tablet {
+      padding: 0 3rem;
+    }
+    @include desktop {
+      width: 68%;
+      margin: 0 auto;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  &__label {
+    color: $silver;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  &__input {
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid $mercury;
+    text-align: start;
+    outline: none;
+    font-family: "Avenir Next";
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    background-color: $alabaster;
+    @include tablet {
+      padding: 16px;
+    }
+    &-name {
+      height: 40px;
+      @include tablet {
+        height: 54px;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include tablet {
+      padding: 0 3rem;
+    }
+    @include desktop {
+      width: 68%;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    display: flex;
+    border-bottom: 1px solid $mercury;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    &:first-child {
+      border-top: 1px solid $mercury;
+      padding-top: 1rem;
+    }
+  }
+
+  &__name-date {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__comment-detail {
+    flex-grow: 1;
+  }
+
+  &__name {
+    font-weight: 500;
+  }
+
+  &__date {
+    color: $silver;
   }
 }
 
-.conversation__item {
-  display: flex;
-  border-bottom: 1px solid $mercury;
-  margin-bottom: 1rem;
-  gap: 1rem;
-  &:first-child {
-    border-top: 1px solid $mercury;
-    padding-top: 1rem;
-  }
-}
-
-.conversation__name-date {
-  display: flex;
-  justify-content: space-between;
-}
-
-.conversation__comment-detail {
-  flex-grow: 1;
-}
-
-.conversation__name {
-  font-weight: 500;
-}
-
-.conversation__date {
-  color: $silver;
-}
-
+//BUTTON
 .btn {
   height: 40px;
   font-size: 1.5rem;
@@ -205,6 +214,7 @@
   border: none;
   border-radius: 4px;
   margin-bottom: 1rem;
+  cursor: pointer;
   &:hover {
     background-color: $bandsite-darkblack;
     color: $white;

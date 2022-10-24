@@ -412,14 +412,12 @@ button {
     margin: 0 2.25rem 2.25rem 2.25rem;
   }
 }
-
 @media (min-width: 1280px) {
   .conversation__container {
     margin: 0 auto;
     max-width: 1280px;
   }
 }
-
 .conversation__img {
   width: 36px;
   height: 36px;
@@ -436,7 +434,6 @@ button {
     height: 48px;
   }
 }
-
 .conversation__wrap {
   display: flex;
   gap: 1rem;
@@ -446,20 +443,23 @@ button {
     padding: 0 3rem;
   }
 }
-
+@media (min-width: 1280px) {
+  .conversation__wrap {
+    width: 68%;
+    margin: 0 auto;
+  }
+}
 .conversation__form {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-
 .conversation__label {
   color: #afafaf;
   margin-bottom: 4px;
   text-transform: uppercase;
   font-weight: 500;
 }
-
 .conversation__input {
   border-radius: 4px;
   padding: 12px;
@@ -486,7 +486,6 @@ button {
     height: 54px;
   }
 }
-
 .conversation__list {
   list-style: none;
   margin: 0;
@@ -497,7 +496,12 @@ button {
     padding: 0 3rem;
   }
 }
-
+@media (min-width: 1280px) {
+  .conversation__list {
+    width: 68%;
+    margin: 0 auto;
+  }
+}
 .conversation__item {
   display: flex;
   border-bottom: 1px solid #e1e1e1;
@@ -508,20 +512,16 @@ button {
   border-top: 1px solid #e1e1e1;
   padding-top: 1rem;
 }
-
 .conversation__name-date {
   display: flex;
   justify-content: space-between;
 }
-
 .conversation__comment-detail {
   flex-grow: 1;
 }
-
 .conversation__name {
   font-weight: 500;
 }
-
 .conversation__date {
   color: #afafaf;
 }
@@ -534,6 +534,7 @@ button {
   border: none;
   border-radius: 4px;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .btn:hover {
   background-color: #000000;

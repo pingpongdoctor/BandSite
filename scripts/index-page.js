@@ -1,27 +1,31 @@
+//THE ARRAY INCLUDES THE DATA OF THE COMMENTS
 const commentData = [
   {
     name: "Connor Walton",
     commentText:
       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
     date: "02/17/2021",
+    image: "./assets/Images/Mohan-muruge.jpg",
   },
   {
     name: "Emilie Beach",
     commentText:
       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
     date: "01/09/2021",
+    image: "./assets/Images/Mohan-muruge.jpg",
   },
   {
     name: "Miles Acosta",
     commentText:
       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
     date: "12/20/2020",
+    image: "./assets/Images/Mohan-muruge.jpg",
   },
 ];
 
 //ADD COMMENTS
 const conversationList = document.querySelector(".conversation__list");
-
+//The function used for creating
 const createElementWithClass = function (element, classes) {
   const createdElement = document.createElement(element);
   createdElement.classList.add(classes);
@@ -45,7 +49,8 @@ const addComment = function () {
     //Create image
     const commentImg = document.createElement("img");
     commentImg.classList.add("conversation__img");
-    commentImg.src = "./assets/Images/Mohan-muruge.jpg";
+    commentImg.src = commentData[i].image;
+    commentImg.alt = "avatar";
     //Create p name
     const commentName = document.createElement("p");
     commentName.classList.add("conversation__name");
@@ -79,9 +84,10 @@ form.addEventListener("submit", (event) => {
     const newComment = {
       name: event.target.name.value,
       commentText: event.target.comment.value,
-      date: `${new Date().getDate()}-${
+      date: `${new Date().getDate()}/${
         new Date().getMonth() + 1
-      }-${new Date().getFullYear()}`,
+      }/${new Date().getFullYear()}`,
+      image: "./assets/Images/Mohan-muruge.jpg",
     };
     commentData.unshift(newComment);
     addComment();
