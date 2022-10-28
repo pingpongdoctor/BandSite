@@ -113,6 +113,7 @@
     object-fit: cover;
     object-position: 20% 50%;
     background-color: $mercury;
+
     @include tablet {
       width: 48px;
       height: 48px;
@@ -219,6 +220,11 @@
 }
 
 //BUTTON
+.conversation__btn-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
 .btn {
   height: 40px;
   font-size: 1.5rem;
@@ -236,5 +242,23 @@
     padding: 0 32px;
     width: 200px;
     margin-left: auto;
+  }
+
+  &-delete {
+    background-color: $bandsite-darkblack;
+    color: $white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+
+  &-like {
+    @extend.btn-delete;
+    margin-left: 0;
+    text-transform: uppercase;
+    background-color: $bandsite-darkblack;
   }
 }
