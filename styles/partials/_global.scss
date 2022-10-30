@@ -131,10 +131,10 @@ button {
     display: inline-block;
     width: 50vw;
     color: $mercury;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
     @include tablet {
       width: 4.6rem;
-      padding-bottom: 33px;
+      padding-bottom: 2.0625rem;
     }
 
     &:hover {

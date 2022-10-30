@@ -152,12 +152,12 @@ button {
   display: inline-block;
   width: 50vw;
   color: #e1e1e1;
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .header__link {
     width: 4.6rem;
-    padding-bottom: 33px;
+    padding-bottom: 2.0625rem;
   }
 }
 .header__link:hover {
@@ -376,6 +376,7 @@ button {
 }
 @media (min-width: 1280px) {
   .hero__frame--shows {
+    padding-top: 2rem;
     width: 38%;
   }
 }
@@ -401,7 +402,7 @@ button {
 @media (min-width: 1280px) {
   .shows__table {
     flex-grow: 1;
-    margin-top: 65px;
+    margin-top: 4.0625rem;
   }
 }
 .shows__heading {
@@ -503,7 +504,7 @@ button {
 }
 @media (min-width: 768px) {
   .btn {
-    padding: 0 32px;
+    padding: 0 2rem;
     width: 180px;
     margin-top: 0.6rem;
   }

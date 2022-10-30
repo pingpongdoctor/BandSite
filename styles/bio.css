@@ -152,12 +152,12 @@ button {
   display: inline-block;
   width: 50vw;
   color: #e1e1e1;
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .header__link {
     width: 4.6rem;
-    padding-bottom: 33px;
+    padding-bottom: 2.0625rem;
   }
 }
 .header__link:hover {
@@ -419,8 +419,8 @@ button {
   }
 }
 .conversation__img {
-  width: 36px;
-  height: 36px;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -428,10 +428,13 @@ button {
      object-position: 20% 50%;
   background-color: #e1e1e1;
 }
+.conversation__img:hover {
+  transform: scale(1.3);
+}
 @media (min-width: 768px) {
   .conversation__img {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
   }
 }
 .conversation__wrap {
@@ -462,7 +465,7 @@ button {
 }
 .conversation__input {
   border-radius: 4px;
-  padding: 12px;
+  padding: 0.75rem;
   margin-bottom: 1rem;
   border: 1px solid #e1e1e1;
   text-align: start;
@@ -483,16 +486,16 @@ button {
   border: 1px solid #d22d2d;
 }
 .conversation__input-name {
-  height: 40px;
+  height: 2.5rem;
 }
 @media (min-width: 768px) {
   .conversation__input-name {
-    height: 54px;
+    height: 3.375rem;
   }
 }
 @media (min-width: 768px) {
   .conversation__input {
-    padding: 16px;
+    padding: 1rem;
   }
 }
 .conversation__list {
@@ -542,7 +545,7 @@ button {
 }
 
 .btn {
-  height: 40px;
+  height: 2.5rem;
   font-size: 1.5rem;
   color: #ffffff;
   background-color: #323232;
@@ -557,7 +560,7 @@ button {
 }
 @media (min-width: 768px) {
   .btn {
-    padding: 0 32px;
+    padding: 0 2rem;
     width: 200px;
     margin-left: auto;
   }
@@ -575,5 +578,4 @@ button {
 .btn-like {
   margin-left: 0;
   text-transform: uppercase;
-  background-color: #000000;
 }/*# sourceMappingURL=bio.css.map */

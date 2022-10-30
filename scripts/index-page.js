@@ -25,18 +25,19 @@ const createElementWithClassAndInnertext = function (
 };
 
 //GET DATA FROM API WEB
-const apiLink =
-  "https://project-1-api.herokuapp.com/comments?api_key=b0519b09-2feb-4482-9102-0ec91faa6067";
-
 const getAndDisplayData = function () {
   axios
-    .get(apiLink)
+    .get(
+      "https://project-1-api.herokuapp.com/comments?api_key=b0519b09-2feb-4482-9102-0ec91faa6067"
+    )
     .then((response) => {
       console.log(response.data);
       const commentData = response.data;
-
+      commentData.sort((a, b) => {
+        return b.timestamp - a.timestamp;
+      });
       conversationList.innerHTML = "";
-      for (let i = commentData.length - 1; i >= 0; i--) {
+      for (let i = 0; i < commentData.length; i++) {
         //Create item (li tag)
         const commentItem = createElementWithClass("li", "conversation__item");
         //Create div for p tags
@@ -157,7 +158,10 @@ form.addEventListener("submit", (event) => {
     );
     console.log(newComment);
     axios
-      .post(apiLink, newComment)
+      .post(
+        "https://project-1-api.herokuapp.com/comments?api_key=b0519b09-2feb-4482-9102-0ec91faa6067",
+        newComment
+      )
       .then((response) => {
         console.log(response);
         getAndDisplayData();
@@ -179,16 +183,15 @@ form.addEventListener("submit", (event) => {
     });
   }
 });
-
 //SET FOCUS AND BLUR EVENTS FOR INPUT BOXES
 input.forEach((inputBox) => {
   //use focus event
-  inputBox.addEventListener("focus", (event) => {
+  inputBox.addEventListener("focus", () => {
     inputBox.classList.add("conversation__input--focus");
     inputBox.classList.remove("conversation__input--blur");
   });
   //use blur event
-  inputBox.addEventListener("blur", (event) => {
+  inputBox.addEventListener("blur", () => {
     inputBox.classList.add("conversation__input--blur");
     inputBox.classList.remove("conversation__input--focus");
   });
