@@ -82,16 +82,16 @@ const hoverFunction = function () {
   });
 };
 
-//GET DATA FROM SERVER
+//GET DATA FROM SERVER AND DISPLAY ON THE WEBSITE
 const showsList = document.querySelector(".shows__list");
+const apiKey =
+  "https://project-1-api.herokuapp.com/showdates?api_key=b0519b09-2feb-4482-9102-0ec91faa6067";
 const showsHeading = document.querySelector(".shows__heading");
 showsHeading.innerText = "Shows";
 
-const getDataAndDisPlay = function () {
+const getDataAndDisPlay = function (apiKey) {
   const getData = axios
-    .get(
-      "https://project-1-api.herokuapp.com/showdates?api_key=b0519b09-2feb-4482-9102-0ec91faa6067"
-    )
+    .get(apiKey)
     .then((response) => {
       const showsData = response.data;
 
@@ -180,4 +180,4 @@ const getDataAndDisPlay = function () {
     });
 };
 
-getDataAndDisPlay();
+getDataAndDisPlay(apiKey);

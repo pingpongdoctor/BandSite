@@ -24,12 +24,12 @@ const createElementWithClassAndInnertext = function (
   return createdElement;
 };
 
-//GET DATA FROM API WEB
-const getAndDisplayData = function () {
+//GET DATA FROM API WEB AND DISPLAY ON THE INTERFACE
+const apiKey =
+  "https://project-1-api.herokuapp.com/comments?api_key=b0519b09-2feb-4482-9102-0ec91faa6067";
+const getAndDisplayData = function (apiKey) {
   axios
-    .get(
-      "https://project-1-api.herokuapp.com/comments?api_key=b0519b09-2feb-4482-9102-0ec91faa6067"
-    )
+    .get(apiKey)
     .then((response) => {
       console.log(response.data);
       const commentData = response.data;
@@ -110,7 +110,7 @@ const getAndDisplayData = function () {
             )
             .then((response) => {
               console.log(response);
-              getAndDisplayData();
+              getAndDisplayData(apiKey);
             })
             .catch((error) => {
               console.log(error);
@@ -125,7 +125,7 @@ const getAndDisplayData = function () {
             )
             .then((response) => {
               console.log(response);
-              getAndDisplayData();
+              getAndDisplayData(apiKey);
             })
             .catch((error) => {
               console.log(error);
@@ -138,7 +138,7 @@ const getAndDisplayData = function () {
     });
 };
 
-getAndDisplayData();
+getAndDisplayData(apiKey);
 
 //SUBMIT FORM
 const input = document.querySelectorAll(".conversation__input");
@@ -164,7 +164,7 @@ form.addEventListener("submit", (event) => {
       )
       .then((response) => {
         console.log(response);
-        getAndDisplayData();
+        getAndDisplayData(apiKey);
       })
       .catch((error) => {
         console.log(error);
